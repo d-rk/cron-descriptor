@@ -1,0 +1,19 @@
+<idea-plugin>
+	<id>com.dwilden.crondescriptor</id>
+	<name>Cron Descriptor</name>
+	<vendor email="dirk.wilden@device-insight.com" url="http://www.device-insight.com">Dirk Wilden</vendor>
+
+	<description><![CDATA[
+    Plugin to display a human readable description for cron expressions as tooltip<br><br>
+    Supports: <em>Java, Kotlin, Properties, Yaml</em>
+    ]]></description>
+
+	<!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+	<idea-version since-build="162" />
+
+	<depends optional="true" config-file="java-features.xml">com.intellij.modules.java</depends>
+	<depends optional="true" config-file="kotlin-features.xml">org.jetbrains.kotlin</depends>
+	<depends optional="true" config-file="properties-features.xml">com.intellij.properties</depends>
+	<depends optional="true" config-file="yaml-features.xml">org.jetbrains.plugins.yaml</depends>
+
+</idea-plugin>

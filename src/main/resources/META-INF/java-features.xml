@@ -1,0 +1,5 @@
+<idea-plugin>
+	<extensions defaultExtensionNs="com.intellij">
+		<annotator language="JAVA" implementationClass="com.dwilden.crondescriptor.JavaCronExpressionAnnotator" />
+	</extensions>
+</idea-plugin>

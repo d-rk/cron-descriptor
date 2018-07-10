@@ -1,0 +1,5 @@
+<idea-plugin>
+	<extensions defaultExtensionNs="com.intellij">
+		<annotator language="kotlin" implementationClass="com.dwilden.crondescriptor.KotlinCronExpressionAnnotator" />
+	</extensions>
+</idea-plugin>
