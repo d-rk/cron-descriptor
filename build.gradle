@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.dwilden'
-version '1.1'
+version '1.2'
 
 apply plugin: 'java'
 
@@ -25,13 +25,18 @@ publishPlugin {
 	password intellijPublishPassword
 }
 
+// for settings see: https://github.com/JetBrains/gradle-intellij-plugin
 intellij {
     version '2018.1'
 	plugins 'org.jetbrains.kotlin:1.2.51-release-IJ2018.1-1', 'java-i18n', 'properties', 'yaml'
+	updateSinceUntilBuild true
+	sameSinceUntilBuild true
 }
 patchPluginXml {
     changeNotes """
       <B>1.0</B> Initial Release of plugin<br>
       <B>1.1</B> localization, 24h time format<br>
+      <B>1.2</B> Improved support for intellij builds, fix for dayOfWeek<br>
       """
+	sinceBuild "181"
 }

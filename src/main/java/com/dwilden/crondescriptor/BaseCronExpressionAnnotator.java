@@ -28,6 +28,7 @@ public abstract class BaseCronExpressionAnnotator<T> implements Annotator {
 	public BaseCronExpressionAnnotator(Class<T> valueClass) {
 		this.valueClass = valueClass;
 		this.parserOptions = Options.twentyFourHour();
+		this.parserOptions.setZeroBasedDayOfWeek(false);
 		this.parserOptions.setThrowExceptionOnParseError(false);
 	}
 
