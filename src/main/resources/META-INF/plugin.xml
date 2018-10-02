@@ -9,7 +9,7 @@
     ]]></description>
 
 	<!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-	<idea-version since-build="162" />
+	<idea-version since-build="181" />
 
 	<depends optional="true" config-file="java-features.xml">com.intellij.modules.java</depends>
 	<depends optional="true" config-file="kotlin-features.xml">org.jetbrains.kotlin</depends>
