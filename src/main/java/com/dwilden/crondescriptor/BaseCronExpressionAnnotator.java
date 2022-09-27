@@ -1,5 +1,7 @@
 package com.dwilden.crondescriptor;
 
+import static com.intellij.lang.annotation.HighlightSeverity.INFORMATION;
+
 import com.intellij.lang.annotation.AnnotationHolder;
 import com.intellij.lang.annotation.Annotator;
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors;
@@ -49,8 +51,12 @@ public abstract class BaseCronExpressionAnnotator<T> implements Annotator {
 
 		try {
 			String description = CronExpressionDescriptor.getDescription(cronExpression, parserOptions, Locale.getDefault());
-			holder.createInfoAnnotation(range, description).setTextAttributes(DefaultLanguageHighlighterColors.LABEL);
+			holder.newAnnotation(INFORMATION, description)
+					.range(range)
+					.textAttributes(DefaultLanguageHighlighterColors.HIGHLIGHTED_REFERENCE)
+					.create();
 		} catch (Throwable e) {
+			throw new RuntimeException(e);
 		}
 	}
 
