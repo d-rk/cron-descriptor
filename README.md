@@ -1,5 +1,8 @@
 # cron-descriptor
-IntelliJ IDEA Plugin to display a human readable description for cron expressions as tooltip
+IntelliJ IDEA Plugin to display a human readable description for cron expressions as tooltip.
+
+After installing the plugin open a file in the editor,
+detected Cron expressions are now underlined and by hovering over the expression with the mouse a tooltip with the description will be displayed.
 
 **Supports:** Java, Kotlin, Properties, Yaml
 
