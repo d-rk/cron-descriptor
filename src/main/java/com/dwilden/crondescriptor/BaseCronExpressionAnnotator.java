@@ -22,6 +22,7 @@ public abstract class BaseCronExpressionAnnotator<T> implements Annotator {
 	protected static final String DOUBLE_QUOTES = "\"";
 	protected static final String QUOTES = "'";
 	protected static final String WHITESPACE = " ";
+	protected static final String DOUBLE_WHITESPACE = "  ";
 
 	private final Class<T> valueClass;
 
@@ -56,7 +57,7 @@ public abstract class BaseCronExpressionAnnotator<T> implements Annotator {
 					.textAttributes(DefaultLanguageHighlighterColors.HIGHLIGHTED_REFERENCE)
 					.create();
 		} catch (Throwable e) {
-			throw new RuntimeException(e);
+//			throw new RuntimeException(e);
 		}
 	}
 
@@ -67,6 +68,10 @@ public abstract class BaseCronExpressionAnnotator<T> implements Annotator {
 		}
 
 		if (expression.startsWith(WHITESPACE) || expression.endsWith(WHITESPACE)) {
+			return false;
+		}
+
+		if (expression.contains(DOUBLE_WHITESPACE)) {
 			return false;
 		}
 

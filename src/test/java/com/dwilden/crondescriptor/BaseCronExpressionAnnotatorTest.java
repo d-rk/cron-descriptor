@@ -12,6 +12,11 @@ public class BaseCronExpressionAnnotatorTest {
 	}
 
 	@Test
+	public void cronWithTooMuchWhitespaceFails() {
+		assertThat(BaseCronExpressionAnnotator.isCronExpression("0 1  * * ?")).isFalse();
+	}
+
+	@Test
 	public void testEndsWithWhitespace() {
 		assertThat(BaseCronExpressionAnnotator.isCronExpression("0 0 12 * * ? ")).isFalse();
 	}
