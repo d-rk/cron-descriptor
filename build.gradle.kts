@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.dwilden"
-version = "1.4"
+version = "1.5"
 
 repositories {
 	mavenCentral()
@@ -43,6 +43,7 @@ tasks {
       <B>1.2</B> Improved support for intellij builds, fix for dayOfWeek<br>
 	  <B>1.3</B> Support for more versions<br>
 	  <B>1.4</B> Remove deprecated API calls<br>
+	  <B>1.5</B> Fix exception handling<br>
       """)
 	}
 
